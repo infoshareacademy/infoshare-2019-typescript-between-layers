@@ -27,8 +27,20 @@
     "help": "./node_modules/.bin/nx help"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "react": "16.8.3",
+    "react-dom": "16.8.3"
+  },
   "devDependencies": {
+    "ts-jest": "24.0.0",
+    "@nrwl/builders": "7.8.0",
+    "jest": "24.1.0",
+    "@types/jest": "24.0.9",
+    "@types/react": "16.8.4",
+    "@types/react-dom": "16.8.2",
+    "react-testing-library": "6.0.0",
+    "cypress": "3.1.0",
+    "@types/jquery": "3.3.6",
     "@angular/cli": "7.3.1",
     "@nrwl/schematics": "7.8.0",
     "@types/node": "~8.9.4",
