@@ -4,35 +4,38 @@ import { Component } from 'react';
 import './app.css';
 
 export class App extends Component {
+  state = {
+    todos: [
+      {
+        id: 1,
+        title: 'Be awesome'
+      },
+      {
+        id: 2,
+        title: 'Learn Nx'
+      }
+    ]
+  };
+
+  addTodo = () => {
+    this.setState({
+      todos: this.state.todos.concat({ id: Date.now(), title: 'New todo' })
+    });
+  };
   render() {
     const title = 'frontend';
     return (
       <div>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Welcome to {title}!</h1>
-          <img
-            width="450"
-            src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-          />
-        </div>
-        <p>
-          This is a React app built with <a href="https://nx.dev">Nx</a>.
-        </p>
-        <p>
-          🔎 **Nx is a set of Angular CLI power-ups for modern development.**
-        </p>
-        <h2>Quick Start & Documentation</h2>
+        <h1>Welcome to {title}!</h1>
+        <button id="add-todo" onClick={this.addTodo}>
+          Add
+        </button>
         <ul>
-          <li>
-            <a href="https://nx.dev/getting-started/what-is-nx">
-              30-minute video showing all Nx features
-            </a>
-          </li>
-          <li>
-            <a href="https://nx.dev/tutorial/01-create-application">
-              Interactive tutorial
-            </a>
-          </li>
+          {this.state.todos.map(todo => (
+            <li className="todo" key={todo.id}>
+              {todo.title}
+            </li>
+          ))}
         </ul>
       </div>
     );
