@@ -22,6 +22,13 @@ export class App extends Component {
       todos: this.state.todos.concat({ id: Date.now(), title: 'New todo' })
     });
   };
+
+  componentDidMount() {
+    fetch('/api/todos').then(response => response.json()).then(
+      todos => this.setState({ todos })
+    )
+  }
+
   render() {
     const title = 'frontend';
     return (
