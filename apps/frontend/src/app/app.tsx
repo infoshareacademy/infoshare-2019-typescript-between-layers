@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { Component } from 'react';
-import { environment as env } from "@env";
-
+import { Todo } from '@trails/data';
 
 import './app.css';
-import { environment } from '../environments/environment.prod';
+import { environment } from '../environments/environment';
 
-export class App extends Component {
+interface State {
+  todos: Todo[]
+}
+
+export class App extends Component<{}, State> {
   state = {
     todos: [
       // {
