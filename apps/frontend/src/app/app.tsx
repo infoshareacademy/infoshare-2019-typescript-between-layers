@@ -1,19 +1,22 @@
 import * as React from 'react';
 import { Component } from 'react';
+import { environment as env } from "@env";
+
 
 import './app.css';
+import { environment } from '../environments/environment.prod';
 
 export class App extends Component {
   state = {
     todos: [
-      {
-        id: 1,
-        title: 'Be awesome'
-      },
-      {
-        id: 2,
-        title: 'Learn Nx'
-      }
+      // {
+      //   id: 1,
+      //   title: 'Be awesome'
+      // },
+      // {
+      //   id: 2,
+      //   title: 'Learn Nx'
+      // }
     ]
   };
 
@@ -24,6 +27,7 @@ export class App extends Component {
   };
 
   componentDidMount() {
+    console.log(environment)
     fetch('/api/todos').then(response => response.json()).then(
       todos => this.setState({ todos })
     )

@@ -55,7 +55,8 @@
         "serve": {
           "builder": "@nrwl/builders:web-dev-server",
           "options": {
-            "buildTarget": "frontend:build"
+            "buildTarget": "frontend:build",
+            "proxyConfig": "apps/frontend/proxy.conf.json"
           },
           "configurations": {
             "production": {
