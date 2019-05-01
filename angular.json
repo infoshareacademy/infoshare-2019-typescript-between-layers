@@ -223,7 +223,8 @@
         "serve": {
           "builder": "@nrwl/builders:node-execute",
           "options": {
-            "buildTarget": "external-service:build"
+            "buildTarget": "external-service:build",
+            "port": 7776
           }
         },
         "lint": {
