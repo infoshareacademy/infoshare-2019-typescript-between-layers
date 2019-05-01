@@ -1,4 +1,2 @@
-export interface Todo {
-  id: number;
-  title: string;
-}
+export * from './lib/todo';
+export * from './lib/product';

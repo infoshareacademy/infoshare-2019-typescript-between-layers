@@ -1,18 +1,33 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Todo, Product } from '@trails/typings';
 
-import { AppService } from './app.service';
+import { TodosService } from './todos.service';
+import { ProductsService } from './products.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly todosService: TodosService,
+    private readonly productsService: ProductsService
+  ) { }
 
   @Get('todos')
-  getData() {
-    return this.appService.getData();
+  async getTodo(): Promise<Todo[]> {
+    return this.todosService.get();
   }
 
-  @Post('addTodo')
-  addTodo() {
-    return this.appService.addTodo();
+  @Post('todos')
+  async addTodo(@Body() todo: Todo) {
+    return this.todosService.add(todo);
+  }
+
+  @Get('products')
+  async getProducts(): Promise<Product[]> {
+    return this.productsService.get();
+  }
+
+  @Post('products')
+  async addProduct(@Body() product: Product) {
+    return this.productsService.add(product);
   }
 }
