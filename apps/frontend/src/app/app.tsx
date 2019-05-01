@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
-import { Todo } from '@trails/data';
+import { Todo } from '@trails/typings';
 
 import './app.css';
 import { environment } from '../environments/environment';

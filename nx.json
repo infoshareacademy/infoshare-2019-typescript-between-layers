@@ -17,8 +17,8 @@
     "backend": {
       "tags": ["backend"]
     },
-    "data": {
-      "tags": ["data"]
+    "typings": {
+      "tags": ["typings"]
     }
   }
 }

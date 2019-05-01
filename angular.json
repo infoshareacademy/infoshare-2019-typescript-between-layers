@@ -162,9 +162,9 @@
         }
       }
     },
-    "data": {
-      "root": "libs/data",
-      "sourceRoot": "libs/data/src",
+    "typings": {
+      "root": "libs/typings",
+      "sourceRoot": "libs/typings/src",
       "projectType": "library",
       "prefix": "trails",
       "architect": {
@@ -172,8 +172,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/data/tsconfig.lib.json",
-              "libs/data/tsconfig.spec.json"
+              "libs/typings/tsconfig.lib.json",
+              "libs/typings/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -181,8 +181,8 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "libs/data/jest.config.js",
-            "tsConfig": "libs/data/tsconfig.spec.json"
+            "jestConfig": "libs/typings/jest.config.js",
+            "tsConfig": "libs/typings/tsconfig.spec.json"
           }
         }
       },

@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@trails/data": ["libs/data/src/index.ts"]
+      "@trails/typings": ["libs/typings/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

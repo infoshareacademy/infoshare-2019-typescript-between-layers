@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Todo } from '@trails/data';
+import { Todo } from '@trails/typings';
 
 @Injectable()
 export class AppService {
