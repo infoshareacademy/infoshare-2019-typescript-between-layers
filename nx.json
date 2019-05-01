@@ -9,16 +9,27 @@
   },
   "projects": {
     "frontend": {
-      "tags": ["frontend"]
+      "tags": [
+        "frontend"
+      ]
     },
     "frontend-e2e": {
       "tags": []
     },
     "backend": {
-      "tags": ["backend"]
+      "tags": [
+        "backend"
+      ]
     },
     "typings": {
-      "tags": ["typings"]
+      "tags": [
+        "typings"
+      ]
+    },
+    "external-service": {
+      "tags": [
+        "external"
+      ]
     }
   }
 }
