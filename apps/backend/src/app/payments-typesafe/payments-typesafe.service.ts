@@ -1,10 +1,10 @@
 import { Injectable, Inject, HttpService } from '@nestjs/common';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { EXTERNAL_SERVICE_URL_TOKEN } from '../../environments/tokens';
-import { Payment } from './payment.model';
+import { Payment, PaymentRecord } from './payment.model';
 
 @Injectable()
-export class PaymentsService {
+export class PaymentsTypeSafeService {
   constructor(@Inject(EXTERNAL_SERVICE_URL_TOKEN) private externalServiceUrl: string,
     private httpService: HttpService) {
   }
@@ -13,7 +13,8 @@ export class PaymentsService {
     return this.httpService
       .get<Payment[]>(`${this.externalServiceUrl}/payments`)
       .pipe(
-        map(response => response.data)
+        map(response => response.data),
+        tap(payment => PaymentRecord.check(payment))
       )
       .toPromise();
   }
