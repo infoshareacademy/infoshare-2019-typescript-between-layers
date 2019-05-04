@@ -7,7 +7,7 @@ import { EXTERNAL_SERVICE_URL_TOKEN } from '../environments/tokens';
 import { ProductsService } from './products.service';
 import { PaymentsController } from './payments/payments.controller';
 import { PaymentsService } from './payments/payments.service';
-import { PaymentsTypeSafeController } from './payments-typesafe/payments.controller';
+import { PaymentsTypeSafeController } from './payments-typesafe/payments-typesafe.controller';
 import { PaymentsTypeSafeService } from './payments-typesafe/payments-typesafe.service';
 
 @Module({
