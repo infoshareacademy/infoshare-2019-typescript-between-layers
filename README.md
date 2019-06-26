@@ -4,7 +4,10 @@ This repository contains code samples for our presentation called "TypeScript be
 
 
 ## Presentation
-You can find presentation under [this link](https://slides.com/michalczukm/typescript-between-layers).
+You can find presentation under :
+
+* [polish version](https://slides.com/michalczukm/typescript-between-layers)
+* [english version](https://slides.com/michalczukm/typescript-across-layers)
 
 ## Speakers
 
