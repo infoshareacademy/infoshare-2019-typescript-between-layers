@@ -32,7 +32,7 @@
   "dependencies": {
     "@nestjs/common": "5.5.0",
     "@nestjs/core": "5.5.0",
-    "express": "4.16.3",
+    "express": "4.17.3",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "runtypes": "^3.2.0"
